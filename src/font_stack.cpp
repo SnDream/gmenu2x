@@ -168,7 +168,7 @@ bool FontStack::LoadFonts(std::initializer_list<FontSpec> specs) {
 			fonts.push_back(std::move(*existing_font_it->second));
 		else
 			fonts.push_back(std::move(new_fonts.at(font_spec)));
-		line_spacing_ = std::max(line_spacing_, fonts.back().getLineSpacing());
+		line_spacing_ = std::max(line_spacing_, 12); /* CUSTOM FIX: reduce line spacing */
 	}
 	fonts_ = std::move(fonts);
 
