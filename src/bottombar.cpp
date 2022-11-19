@@ -15,7 +15,7 @@ BottomBar::BottomBar(GMenu2X& gmenu2x)
 	setContainer(LAY_FLEX | LAY_ROW | LAY_START);
 	setBehave(LAY_HFILL);
 
-	margin = gmenu2x.skinConfInt["bottomBarHeight"] / 2;
+	margin = gmenu2x.skinConfInt["bottomBarHeight"] / 4; /* CUSTOM FIX: Redirect home dir */
 
 	auto sd = std::make_shared<LayoutSurface>(gmenu2x.sc.skinRes("imgs/sd.png"));
 	sd->setMargins(margin, 0, 0, 0);

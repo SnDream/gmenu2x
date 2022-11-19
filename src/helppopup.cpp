@@ -28,7 +28,7 @@ void HelpPopup::paint(Surface& s) {
 	unsigned int spacing = font.getLineSpacing();
 	unsigned int helpBoxHeight = 20 + nb_strings * spacing;
 
-	unsigned int posY = gmenu2x.getContentArea().first;
+	unsigned int posY = 0; // gmenu2x.getContentArea().first; /* CUSTOM FIX: ? */
 
 	/* Center the popup */
 	posY += (gmenu2x.height() - posY - helpBoxHeight) / 2;

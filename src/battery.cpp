@@ -69,6 +69,7 @@ unsigned short Battery::getBatteryLevel()
 	handle = fopen(path.c_str(), "r");
 	if (handle) {
 		fscanf(handle, "%lu", &voltage_max);
+		voltage_max -= 80000; /* CUSTOM FIX: 456Mhz Ver fix */
 		fclose(handle);
 	}
 
